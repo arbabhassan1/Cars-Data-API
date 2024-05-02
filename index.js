@@ -10,7 +10,7 @@ function filterDataByModel(data, modelName) {
 
 app.get('/search', (req, res) => {
    try{
-    const workbook = XLSX.readFile("./data.xlsx");
+    const workbook = XLSX.readFile(__dirname + "/data.xlsx");
     const sheetName = workbook.SheetNames[0];
     const sheet = workbook.Sheets[sheetName];
 
